@@ -1,0 +1,13 @@
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-01 15:54:21
+hint
+project --topLevelPackage org.springsource.tutorial --projectName dojo-json-rest-store
+hint
+persistence setup --provider HIBERNATE --database MYSQL 
+hint
+// [failed] entity --class ~.domain.State
+entity --class ~.domain.USState
+field string --fieldName name --notNull
+field string --fieldName abbreviation --notNull --sizeMax 2 --sizeMin 2
+field string --fieldName capital --notNull 
+exit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-01 16:01:22
