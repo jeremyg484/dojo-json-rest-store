@@ -11,3 +11,7 @@ field string --fieldName abbreviation --notNull --sizeMax 2 --sizeMin 2
 field string --fieldName capital --notNull 
 exit
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-01 16:01:22
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-01 16:17:52
+web mvc setup
+ex
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-01 16:26:34
