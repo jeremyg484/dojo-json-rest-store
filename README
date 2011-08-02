@@ -6,6 +6,10 @@ The main source files of interest are:
 https://github.com/jeremyg484/dojo-json-rest-store/blob/master/src/main/webapp/demo.html <- The Dojo grid client
 https://github.com/jeremyg484/dojo-json-rest-store/blob/master/src/main/java/org/springsource/tutorial/web/USStateController.java <- The Spring @MVC controller backing the JsonRest store
 
+This is a WIP intended to test how easily we can support JsonStore with Spring MVC.  There are a couple of issues at the moment:
+1. JsonStore doesn't set an Accept header when is issues PUT and POST requests, thus the wrong handler method (the one that produces HTML) is getting selected.
+2. JsonStore sends its "sort" parameter in the form of "sort(+fieldName1,+fieldName2,-fieldName3,...)", thus the entire thing becomes the parameter key.  This is inconvenient to handle in Spring MVC as it requires dropping down to HttpServletRequest and iterating through parameter keys to find the one beginning with "sort", as opposed to being able to use the @RequestParam handler argument annotation.
+
 The configured Maven setup should allow the full WAR to be built via 'mvn install', and optionally to be run in an embedded Tomcat instance via 'mvn tomcat:run'.
 
 When running locally on Tomcat, the Dojo grid demo page is accessed at http://localhost:8080/dojo-json-rest-store/demo.html
