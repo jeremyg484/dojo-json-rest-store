@@ -15,3 +15,16 @@ exit
 web mvc setup
 ex
 // Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-01 16:26:34
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-01 17:09:59
+focus --class ~domain.USState
+controller scaffold --class ~.web.USStateController
+exit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-01 17:10:40
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-01 17:51:21
+help
+finder add --class ~domain.USState --finderName foo
+exit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-02 14:07:12
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2011-08-02 14:10:57
+exit
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log closed at 2011-08-02 14:11:34

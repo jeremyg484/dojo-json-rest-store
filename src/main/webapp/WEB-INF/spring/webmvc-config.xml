@@ -8,7 +8,7 @@
 	
 	<!-- Turns on support for mapping requests to Spring MVC @Controller methods
 	     Also registers default Formatters and Validators for use across all @Controllers -->
-	<mvc:annotation-driven/>
+	<mvc:annotation-driven conversion-service="applicationConversionService"/>
 	
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources -->
 	<mvc:resources location="/, classpath:/META-INF/web-resources/" mapping="/resources/**"/>
@@ -70,4 +70,5 @@
       </list>
     </property>
   </bean>
+<bean class="org.springsource.tutorial.web.ApplicationConversionServiceFactoryBean" id="applicationConversionService"/>
 </beans>

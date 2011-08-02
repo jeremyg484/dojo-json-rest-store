@@ -1,0 +1,13 @@
+Demo: Connecting DataGrid to a Store backed by Spring @MVC
+
+This is a simple demo app to show connecting the new dojo.store.JsonRest object store to a Spring @MVC RESTful controller.
+
+The configured Maven setup should allow the full WAR to be built via 'mvn install', and optionally to be run in an embedded Tomcat instance via 'mvn tomcat:run'.
+
+When running locally on Tomcat, the Dojo grid demo page is accessed at http://localhost:8080/dojo-json-rest-store/demo.html
+
+Running the app locally requires a local MySql instance with a database named 'dojoTest'.  See /src/main/resources/database.properties to edit connection settings for MySql.
+
+This app can also be run on Cloud Foundry without any required changes.  Just run 'mvn install' and then 'vmc push {app_name} --path target/', and bind a MySql service to the app when given the choice.
+
+The base application was generated with Spring Roo, thus it also includes the usual Roo HTML scaffolding.  The JsonRest store operations are supported in this case by explicitly adding more specific @RequestMappings to handle them. 

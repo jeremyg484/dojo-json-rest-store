@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Demo: Connecting DataGrid to a Store backed by Spring @MVC</title>
+        <link rel="stylesheet" href="resources/styles/style.css" media="screen">
+        <link rel="stylesheet" href="resources/styles/demo.css" media="screen">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojox/grid/resources/claroGrid.css" media="screen">
+        <!-- load dojo and provide config via data attribute -->
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"
+                data-dojo-config="isDebug: true,parseOnLoad: true">
+        </script>
+        <script>
+            dojo.require("dojo.store.JsonRest");
+            dojo.require("dojo.store.Memory");
+            dojo.require("dojo.store.Cache");
+            dojo.require("dojox.grid.DataGrid");
+            dojo.require("dojo.data.ObjectStore");
+            dojo.ready(function(){
+                myStore = dojo.store.Cache(dojo.store.JsonRest({target:"usstates/"}), dojo.store.Memory());
+                grid = new dojox.grid.DataGrid({
+                    store: dataStore = dojo.data.ObjectStore({objectStore: myStore}),
+                    structure: [
+                        {name:"State Name", field:"name", width: "200px"},
+                        {name:"Abbreviation", field:"abbreviation", width: "200px", editable: true}
+                    ]
+                }, "target-node-id"); // make sure you have a target HTML element with this id
+                grid.startup();
+                dojo.query("#save").onclick(function(){
+                    dataStore.save();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Demo: Connecting DataGrid to a Store backed by Spring @MVC</h1>
+        <div id="target-node-id"></div>
+        <button id="save">Save</button>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_springsource_tutorial_domain_USState" modelAttribute="USState" path="/usstates" versionField="Version" z="uz2QbKZ/+oBrDeJem1XsV0erf0c=">
+        <field:input field="name" id="c_org_springsource_tutorial_domain_USState_name" required="true" z="64YFlXoXOLngZJNaMIgaomrnVtQ="/>
+        <field:input field="abbreviation" id="c_org_springsource_tutorial_domain_USState_abbreviation" max="2" min="2" required="true" z="JQZPpyGXoaqiz9UI3Xc4MYEluNA="/>
+        <field:input field="capital" id="c_org_springsource_tutorial_domain_USState_capital" required="true" z="6Fc1zq/rPKM+A6nu09DUOSmfmTw="/>
+    </form:update>
+</div>
