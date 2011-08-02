@@ -2,6 +2,10 @@ Demo: Connecting DataGrid to a Store backed by Spring @MVC
 
 This is a simple demo app to show connecting the new dojo.store.JsonRest object store to a Spring @MVC RESTful controller.
 
+The main source files of interest are:
+https://github.com/jeremyg484/dojo-json-rest-store/blob/master/src/main/webapp/demo.html <- The Dojo grid client
+https://github.com/jeremyg484/dojo-json-rest-store/blob/master/src/main/java/org/springsource/tutorial/web/USStateController.java <- The Spring @MVC controller backing the JsonRest store
+
 The configured Maven setup should allow the full WAR to be built via 'mvn install', and optionally to be run in an embedded Tomcat instance via 'mvn tomcat:run'.
 
 When running locally on Tomcat, the Dojo grid demo page is accessed at http://localhost:8080/dojo-json-rest-store/demo.html
